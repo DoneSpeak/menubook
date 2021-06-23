@@ -1,5 +1,7 @@
 # menubook
 
+The menubook which define anything is material to another thing which is material as well.
+
 ## Project setup
 ```
 npm install
