@@ -21,3 +21,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# 忽略.husky/customized中开发人员自定义脚本
+.husky/customized

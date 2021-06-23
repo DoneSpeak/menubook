@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "$1"
+echo "$0" > test.txt
+echo "$1" >> test.txt

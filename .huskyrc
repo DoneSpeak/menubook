@@ -1,0 +1,14 @@
+#!/bin/bash
+
+readonly CUSTOMIZED_HOOK="$(dirname "$0")/customized/$(basename "$0")"
+
+if [ -f "$CUSTOMIZED_HOOK" ];then
+    debug "husky - run customized hook - $CUSTOMIZED_HOOK"
+	sh -e $CUSTOMIZED_HOOK $@
+    resultCode="$?"
+
+    if [ $resultCode != 0 ]; then
+        echo "husky - $CUSTOMIZED_HOOK hook exited with code $resultCode (error)"
+        exit $resultCode
+    fi
+fi
