@@ -10,6 +10,6 @@ endif
 ifeq ($(wildcard .gitignore),)
 	touch .gitignore
 endif
-ifeq ($(shell grep -c .husky/customized .gitignore),0)
-	echo "\n# 忽略.husky/customized中开发人员自定义脚本\n.husky/customized" >> .gitignore
+ifeq ($(shell grep -c .husky/customized .husky/.gitignore),0)
+	echo "\n# 忽略.husky/customized中开发人员自定义脚本\n.husky/customized" >> .husky/.gitignore
 endif
