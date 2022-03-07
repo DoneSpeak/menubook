@@ -4,7 +4,7 @@ ifeq ($(wildcard .husky/_/husky.sh),)
 	npx husky install
 endif
 ifeq ($(wildcard ~/.huskyrc),)
-# 如果没有～/.huskyrc, 则创建为项目根目录的～/.huskyrc
+# 如果没有～/.huskyrc, 则创建为项目根目录的.huskyrc创建软连接到～/.huskyrc
 	ln -s $(PWD)/.huskyrc ~/.huskyrc
 else
 	@echo "Fail: ~/.huskyrc already exist, please handle it manually."
