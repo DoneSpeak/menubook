@@ -2,6 +2,7 @@
 
 readonly CUSTOMIZED_HOOK="$(dirname "$0")/customized/$(basename "$0")"
 
+debug "The customized hooks is $CUSTOMIZED_HOOK"
 if [ -f "$CUSTOMIZED_HOOK" ];then
     debug "husky - run customized hook - $CUSTOMIZED_HOOK"
 	sh -e $CUSTOMIZED_HOOK $@
