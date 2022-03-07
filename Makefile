@@ -13,6 +13,10 @@ ifeq ($(wildcard .gitignore),)
 # 如果没有.gitignore文件，则创建
 	touch .gitignore
 endif
+ifeq ($(wildcard .husky/customized),)
+# 如果没有customized目录，则创建
+	mkdir -p .husky/customized
+endif
 ifeq ($(shell grep -c /customized .husky/.gitignore),0)
 	echo "\n# 忽略.husky/customized中开发人员自定义脚本\n/customized" >> .husky/.gitignore
 endif
