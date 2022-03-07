@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Here is ${PWD}"
+yamllint .
